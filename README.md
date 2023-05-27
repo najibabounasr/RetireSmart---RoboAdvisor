@@ -56,5 +56,99 @@ To complete the submission, please upload the following files to your repository
 With this application, users can gain valuable insights and recommendations for their retirement investment portfolios, empowering them to make informed financial decisions and plan for a secure future.
 
 
-###
+### Demonstration / Overview:
+
+#### Step 1: Configuring the Initial Robo Advisor
+
+   ![alt-image](Images/15-4-slots-marked-as-required.png)
+
+   - The Lex bot is named "RoboAdvisor" and serves as a robo advisor.
+   - It is configured for English (US) language and uses the Salli voice for output.
+   - The session timeout is set to 5 minutes.
+   - Sentiment analysis and COPPA compliance are not enabled.
+   - Advanced options are not enabled, using default settings.
+   - The bot has an intent called "recommendPortfolio" for providing investment recommendations.
+   - Sample utterances capture various user requests related to retirement investment.
+   - Four required slots gather necessary information for personalized recommendations.
+   - A confirmation prompt message assures the user that their request is acknowledged.
+   - The bot is designed to generate the best investment portfolio based on the collected information.
+
+   ![Alt-Image](Images/15-4-bot-slots.png)
+
+
+
+
+In summary, the Lex bot "RoboAdvisor" is created as a robo advisor, configured with language, voice, and timeout settings. It has an intent, sample utterances, and required slots to gather information for personalized recommendations. The confirmation prompt assures the user, and the bot aims to provide the best investment portfolio based on the collected data.
+
+
+#### Building and Testing the RoboAdvisor
+
+   ![Gif-1](Images/Screen%20Recording%202023-05-26%20at%204.04.40%20PM.gif)
+
+In the preceding animation, a user starts a dialogue with the robo advisor. The dialogue is as follows:
+
+   """
+   User: I want to invest for my retirement
+
+   Robo advisor: Thank you for trusting me to help, could you please give me your name?
+
+   User: Bob
+
+   Robo advisor: How old are you?
+
+   User: 53
+
+   Robo advisor: How much do you want to invest?
+   
+   User: 20000
+
+   Robo advisor: What level of investment risk would you like to take? (None, Low, Medium, High)
+
+   User: Low
+   
+   Robo advisor: Thanks, now I will look for the best investment portfolio for you.
+   """
+
+#### Enhancing our Robo Advisor with an Amazon Lambda Function
+
+   ![Gif-2](Images/Screen%20Recording%202023-05-26%20at%206.53.27%20PM.gif)
+
+
+
+The Lambda function file used to power our Amazon Lex Chatbot can found in the:
+
+   - 'iambda_function.py' file in the Lambda folder of the repository
+
+Lambda is a serverless computing service provided by Amazon Web Services (AWS) that allows you to run code without managing servers. Here's a brief summary of Lambda and its use cases:
+
+   - Lambda Functions: Lambda enables you to execute your code in response to events without provisioning or managing servers. You can write your code in various supported programming languages and configure Lambda to automatically scale based on the incoming workload.
+
+   - Event-Driven Architecture: Lambda functions are commonly used in event-driven architectures, where they respond to events such as changes to data in storage, updates from IoT devices, or incoming API requests. Lambda functions can be triggered by a wide range of event sources within the AWS ecosystem, such as S3, DynamoDB, SNS, or API Gateway.
+
+   - Scalability and Cost Optimization: Lambda automatically scales your code in response to incoming requests. It provisions the required resources to handle the workload and scales them down when the demand decreases. This dynamic scaling allows you to pay only for the actual compute time consumed, resulting in cost optimization.
+
+   - Microservices and Serverless Applications: Lambda functions are often used to build microservices and serverless applications. Each function can handle a specific task or business logic, and they can be orchestrated together to create complex workflows. This approach simplifies development, deployment, and maintenance, as you can focus on individual functions without worrying about the infrastructure.
+
+   - Real-time File Processing: Lambda is suitable for real-time file processing tasks. For example, you can trigger a Lambda function when a file is uploaded to an S3 bucket, and the function can process the file immediately, perform transformations, extract data, or trigger further actions.
+
+   - Chatbots and Voice Assistants: Lambda can be used in combination with conversational interfaces like Lex or Alexa Skills Kit. It allows you to handle user inputs, perform backend logic, retrieve data from databases or APIs, and generate responses dynamically.
+
+   - Data Transformation and ETL: Lambda is often utilized for data transformation and extract, transform, load (ETL) processes. You can write code to transform data as it is ingested, clean up or validate input, and store the transformed data in the desired format or location.
+
+In summary, Lambda provides a serverless computing environment where you can run code without managing servers. It is commonly used in event-driven architectures, microservices, real-time file processing, chatbots, data transformation, and other scenarios that benefit from scalable, cost-effective, and event-triggered execution.
+
+## Contributors
+
+The sole contributor for this project is:
+
+**NAJIB ABOU NASR**
+ no instagram or linkedin yet!
+---
+
+## License
+
+Using the 'MIT' license!
+--- 
+
+
 
